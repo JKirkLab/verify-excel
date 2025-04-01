@@ -58,7 +58,7 @@ st.markdown("**Paste your Peptide column headers here (from Excel or CSV):**")
 pep_header_input = st.text_area("Paste headers", height=200, key = 'pep_headers')
 pep_columns = [col.strip() for col in pep_header_input.split('\t') if col.strip()]
 if pep_columns: 
-    hc_cols = ['Modifications', '# Protein Groups', '# Proteins', '# PSMs', 'Master Protein Accessions', 'Positions in Master Proteins', '# Missed Cleavages']
+    hc_cols = ['Modifications in Master Proteins', 'Modifications', '# Protein Groups', '# Proteins', '# PSMs', 'Master Protein Accessions', 'Positions in Master Proteins', '# Missed Cleavages']
     patterns = {
         r"^Abundance Ratio:.*": 'ratio',
         r"^Abundance Ratio P-Value:.*": 'pvalue',
